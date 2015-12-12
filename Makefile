@@ -1,7 +1,13 @@
-all: main.class execute
+JC = javac
+JRE = java
 
-main.class: main.java
+FILE = Escaper
+DEPS = *.java
+
+all: $(FILE).class execute
+
+$(FILE).class: $(FILE).java $(DEPS)
 	javac $<
 
-execute: main.class
-	java main
+execute: $(FILE).class
+	$(JRE) $(FILE)
