@@ -1,0 +1,109 @@
+
+Input file given: input.txt
+Le parking a une dimension 5 fois 5
+Il contient 1 Goal car et 3 autres voitures
+La voiture Goal se trouve en position: [(2,0), (2,1)]
+La voiture 1 se trouve en position: [(0,1), (0,2)]
+La voiture 2 se trouve en position: [(1,2), (2,2)]
+La voiture 3 se trouve en position: [(2,3), (3,3)]
+
+Une façon de sortir du Parking en 6 mouvements a été trouvée
+Étape suivante: déplacer voiture c1
+[(0,1), (0,2)] -> [(0,0), (0,1)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1            |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+| GG  GG  c2  c3    
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|                   |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c2
+[(1,2), (2,2)] -> [(0,2), (1,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c2        |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+| GG  GG      c3    
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|                   |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,0), (2,1)] -> [(2,1), (2,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c2        |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+|     GG  GG  c3    
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|                   |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(2,3), (3,3)] -> [(3,3), (4,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c2        |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+|     GG  GG        
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|             c3    |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,1), (2,2)] -> [(2,2), (2,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c2        |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+|         GG  GG    
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|             c3    |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,2), (2,3)] -> [(2,3), (2,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c2        |
++   +   +   +   +   +
+|         c2        |
++   +   +   +   +   +
+|             GG  GG
++   +   +   +   +   +
+|             c3    |
++   +   +   +   +   +
+|             c3    |
++---+---+---+---+---+
+
+
+Done.
+

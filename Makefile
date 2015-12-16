@@ -4,14 +4,18 @@ JRE = java
 FILE = Escaper
 DEPS = *.java
 IN = input.txt
+IN2 = input2.txt
 
 all: $(FILE).class execute
 
 $(FILE).class: $(FILE).java $(DEPS)
-	javac $<
+	$(JC) $<
 
 execute: $(FILE).class
-	$(JRE) $(FILE) $(IN)
+	$(JRE) $(FILE) $(IN) | tee output.txt
+
+execute_hard: $(FILE).class
+	$(JRE) $(FILE) $(IN2) | tee output2.txt
 
 tex: rapport.tex
 	latexmk -pdf --output-directory=tex_files $< && evince tex_files/rapport.pdf

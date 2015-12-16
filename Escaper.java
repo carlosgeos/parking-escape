@@ -83,6 +83,7 @@ public class Escaper {
 		}
 	    }
 	}
+
     }
 
     public static boolean isInList(List<String[][]> list, String[][] candidate) {
@@ -114,6 +115,7 @@ public class Escaper {
 	    System.out.print("Étape suivante: ");
 	    Car toMove = movement.carList.get(movement.index);
 	    String id = toMove.carId;
+
 	    System.out.println("déplacer voiture " + id);
 	    System.out.print(movement.predParking.carList.get(movement.index));
 	    System.out.print(" -> ");

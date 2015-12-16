@@ -1,0 +1,547 @@
+
+Input file given: input2.txt
+Le parking a une dimension 5 fois 5
+Il contient 1 Goal car et 9 autres voitures
+La voiture Goal se trouve en position: [(2,1), (2,2)]
+La voiture 1 se trouve en position: [(0,0), (0,1)]
+La voiture 2 se trouve en position: [(1,0), (1,1)]
+La voiture 3 se trouve en position: [(2,0), (3,0)]
+La voiture 4 se trouve en position: [(4,0), (4,1)]
+La voiture 5 se trouve en position: [(0,2), (0,3)]
+La voiture 6 se trouve en position: [(1,3), (2,3)]
+La voiture 7 se trouve en position: [(3,2), (4,2)]
+La voiture 8 se trouve en position: [(0,4), (1,4)]
+La voiture 9 se trouve en position: [(3,3), (3,4)]
+
+Une façon de sortir du Parking en 33 mouvements a été trouvée
+Étape suivante: déplacer voiture c2
+[(1,0), (1,1)] -> [(1,1), (1,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c5  c5  c8|
++   +   +   +   +   +
+|     c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6    
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(2,0), (3,0)] -> [(1,0), (2,0)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c5  c5  c8|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6    
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c8
+[(0,4), (1,4)] -> [(1,4), (2,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c5  c5    |
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c5
+[(0,2), (0,3)] -> [(0,3), (0,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c1
+[(0,0), (0,1)] -> [(0,1), (0,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+|     c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(1,0), (2,0)] -> [(0,0), (1,0)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,1), (2,2)] -> [(2,0), (2,1)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG      c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4  c7        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c7
+[(3,2), (4,2)] -> [(2,2), (3,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+| c4  c4            |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c4
+[(4,0), (4,1)] -> [(4,1), (4,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|     c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c4
+[(4,1), (4,2)] -> [(4,2), (4,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|         c4  c4    |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c4
+[(4,2), (4,3)] -> [(4,3), (4,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|             c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c7
+[(2,2), (3,2)] -> [(3,2), (4,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| GG  GG      c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,0), (2,1)] -> [(2,1), (2,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c3  c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(0,0), (1,0)] -> [(1,0), (2,0)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+|     c1  c1  c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c1
+[(0,1), (0,2)] -> [(0,0), (0,1)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c3  c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+|         c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(1,0), (2,0)] -> [(2,0), (3,0)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+|     c2  c2  c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c2
+[(1,1), (1,2)] -> [(1,0), (1,1)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+| c3  GG  GG  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+|         c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c3
+[(2,0), (3,0)] -> [(3,0), (4,0)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c3      c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,1), (2,2)] -> [(2,0), (2,1)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+| GG  GG      c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c3      c7  c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c7
+[(3,2), (4,2)] -> [(2,2), (3,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c3          c4  c4|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c4
+[(4,3), (4,4)] -> [(4,2), (4,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c3      c4  c4    |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c4
+[(4,2), (4,3)] -> [(4,1), (4,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2      c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+| c3      c7  c9  c9|
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c7
+[(2,2), (3,2)] -> [(1,2), (2,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1      c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6  c8|
++   +   +   +   +   +
+| GG  GG  c7  c6  c8
++   +   +   +   +   +
+| c3          c9  c9|
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c7
+[(1,2), (2,2)] -> [(0,2), (1,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6  c8|
++   +   +   +   +   +
+| GG  GG      c6  c8
++   +   +   +   +   +
+| c3          c9  c9|
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,0), (2,1)] -> [(2,1), (2,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6  c8|
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+| c3          c9  c9|
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c9
+[(3,3), (3,4)] -> [(3,2), (3,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6  c8|
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+| c3      c9  c9    |
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c8
+[(1,4), (2,4)] -> [(2,4), (3,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6    |
++   +   +   +   +   +
+|     GG  GG  c6  c8
++   +   +   +   +   +
+| c3      c9  c9  c8|
++   +   +   +   +   +
+| c3  c4  c4        |
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c8
+[(2,4), (3,4)] -> [(3,4), (4,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6    |
++   +   +   +   +   +
+|     GG  GG  c6    
++   +   +   +   +   +
+| c3      c9  c9  c8|
++   +   +   +   +   +
+| c3  c4  c4      c8|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c9
+[(3,2), (3,3)] -> [(3,1), (3,2)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7  c6    |
++   +   +   +   +   +
+|     GG  GG  c6    
++   +   +   +   +   +
+| c3  c9  c9      c8|
++   +   +   +   +   +
+| c3  c4  c4      c8|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c6
+[(1,3), (2,3)] -> [(2,3), (3,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7        |
++   +   +   +   +   +
+|     GG  GG  c6    
++   +   +   +   +   +
+| c3  c9  c9  c6  c8|
++   +   +   +   +   +
+| c3  c4  c4      c8|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture c6
+[(2,3), (3,3)] -> [(3,3), (4,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7        |
++   +   +   +   +   +
+|     GG  GG        
++   +   +   +   +   +
+| c3  c9  c9  c6  c8|
++   +   +   +   +   +
+| c3  c4  c4  c6  c8|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,1), (2,2)] -> [(2,2), (2,3)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7        |
++   +   +   +   +   +
+|         GG  GG    
++   +   +   +   +   +
+| c3  c9  c9  c6  c8|
++   +   +   +   +   +
+| c3  c4  c4  c6  c8|
++---+---+---+---+---+
+
+Étape suivante: déplacer voiture GG
+[(2,2), (2,3)] -> [(2,3), (2,4)]
+Le Parking doit se trouver dans cet état:
+
++---+---+---+---+---+
+| c1  c1  c7  c5  c5|
++   +   +   +   +   +
+| c2  c2  c7        |
++   +   +   +   +   +
+|             GG  GG
++   +   +   +   +   +
+| c3  c9  c9  c6  c8|
++   +   +   +   +   +
+| c3  c4  c4  c6  c8|
++---+---+---+---+---+
+
+
+Done.
+
