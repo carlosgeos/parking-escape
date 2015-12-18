@@ -63,7 +63,7 @@ public class Escaper {
 	List<String[][]> visited = new ArrayList();
 
 	Parking treating = park;
-	visited.add(treating.parking);
+	visited.add(treating.grid);
 	toCheck.add(treating);
 
 	while(toCheck.size() != 0) {
@@ -71,13 +71,13 @@ public class Escaper {
 	    for (int i = 0; i < treating.moves.size(); i++) {
 		Move nextMove = treating.moves.get(i);
 		Parking newParking = new Parking(nextMove);
-		if (isInList(visited, newParking.parking) == false) {
-		    if (checkSolved(newParking.parking)) {
+		if (isInList(visited, newParking.grid) == false) {
+		    if (checkSolved(newParking.grid)) {
 			followPath(newParking, 0);
 		    	System.out.println("\nDone.\n");
 			System.exit(0);
 		    }
-		    visited.add(newParking.parking);
+		    visited.add(newParking.grid);
 		    toCheck.add(newParking);
 		}
 	    }
@@ -96,11 +96,11 @@ public class Escaper {
 	return false;
     }
 
-    public static boolean checkSolved(String[][] parking) {
+    public static boolean checkSolved(String[][] grid) {
 	// Condition for the puzzle to be solved. Can be
 	// anything... Testing the string in the exit case is simple
-    	return parking[Parking.exitX][Parking.exitY] == null ? false :
-	    parking[Parking.exitX][Parking.exitY].equals("GG");
+    	return grid[Parking.exitX][Parking.exitY] == null ? false :
+	    grid[Parking.exitX][Parking.exitY].equals("GG");
     }
 
     public static void noSol(Parking block) {

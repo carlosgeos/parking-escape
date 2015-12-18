@@ -1,5 +1,5 @@
 
-Input file given: input2.txt
+Input file given: RushHour.txt
 Le parking a une dimension 5 fois 5
 Il contient 1 Goal car et 9 autres voitures
 La voiture Goal se trouve en position: [(2,1), (2,2)]

@@ -75,11 +75,11 @@
 Le but de ce projet est de produire un algorithme efficace pour
 résoudre le casse-tête ``Parking Escape'' également connu sous le nom
 ``Rush Hour''. Le jeu simule une congestion automobile dans un parking
-et l'objectif est de faire sortir une certaine voiture (goal/rouge)
+et l'objectif est de faire sortir une certaine voiture (Goal/rouge)
 alignée avec la sortie. Les autres vehicules bloquent la sortie et ne
 peuvent se déplacer que le long de ses axes (horizontal ou vertical).
 
-\section{Solution proposé - Algorithme}
+\section{Solution proposée - Algorithme}
 
 Comme conseillé dans l'énoncé, on considère chaque état possible du
 parking comme un sommet dans un graphe, et chaque mouvement (déplacer
@@ -90,6 +90,8 @@ fin a son exécution dès qu'une solution a été trouvée, puisque on est
 sûr d'avoir trouvé la plus courte et il ne faut pas verifier des
 autres solutions.
 
+\medbreak
+
 Plus spécifiquement, on regarde tous les mouvements possibles dans un
 sommet/parking de départ \emph{s}. Pour chaque mouvement, un autre
 Parking est créé, et il n'est gardé que s'il n'a pas été visité
@@ -97,11 +99,20 @@ avant. Aprés avoir construit tous les états possibles avec ces
 mouvements on passe au premier et recommence, en regardant tous le
 mouvements possibles pour ce parking.
 
-Une autre approche serait de construire le graphe avec tous les cas
-possibles, et utiliser l'algorithme de Dijkstra pour trouver le chemin
-le plus court entre un sommet initial et un sommet marqué comme
-solution. Dans ce cas, puisque tous les arcs ont le même poids, cette
-approche n'est pas choisie.
+\medbreak
+
+Finalement, si une solution a été trouvée, les étapes sont données
+dans l'ordre avec une méthode recursive, qui remonte jusqu'au sommet
+de départ grace aux liens entre les arcs et les sommets.
+
+\medbreak
+
+Une autre approche serait de construire un graphe non orienté avec
+tous les cas possibles, les relier de la même façon (avec des
+arcs/mouvements - on aura des cycles) et utiliser l'algorithme de
+Dijkstra pour trouver le chemin le plus court entre un sommet initial
+et un sommet marqué comme solution. Dans ce cas, puisque tous les arcs
+ont le même poids, cette approche n'est pas choisie.
 
 \subsection{Complexité}
 
@@ -110,10 +121,12 @@ Dans le pire des cas, cet algorithme a une complexité de \emph{O(|S| +
 nombre d'arcs, car tous les sommets et tous les arcs sont
 visités. L'espace de travail est le même.
 
-Dans notre cas, on connaît pas tous les sommets, donc c'est plus
+\medbreak
+
+Dans notre cas, on connaît pas tous les sommets, donc il est plus
 adéquat d'exprimmer la complexité comme: \emph{O(b$^{m})$} où \emph{b}
 est le nombre maximum d'arcs sortants d'un sommet (aussi nombre de
-sommet ``fils'') et \emph{m} la hauteur maximale.
+sommets ``fils'') et \emph{m} la hauteur maximale.
 
 
 
@@ -160,25 +173,31 @@ deux méthodes:
 \subsection{Structures de données}
 
 Des listes de type \texttt{List<TYPE>, ArrayList()} sont utilisés dans
-la plus part des cas. Une file est aussi utilisé pour stocker les
-sommets a visiter dans l'algorithme de visite.
+la plus part des cas. Une file \texttt{Queue<TYPE>, LinkedList()} est
+aussi utilisé pour stocker les sommets a visiter dans l'algorithme de
+visite. En effet, celui ci se base sur cette file pour accéder aux
+sommets en largeur (``breadth first'').
 
 \section{Améliorations}
 
-Même si le paradigme OOP a été suivi, beaucoup de proprietés des
-objets restent publiques, pour faciliter l'accés aux autres classes,
-et ne pas gonfler les classes avec des accesseurs. Néanmoins, une
-meilleure encapsulation peut être achevée.
+\begin{itemize}
+\item Même si le paradigme OOP a été suivi, beaucoup de proprietés des
+  objets restent publiques, pour faciliter l'accés aux autres classes,
+  et ne pas gonfler les classes avec des accesseurs. Néanmoins, une
+  meilleure encapsulation peut être achevée.
+\item On pourrait considérer le déplacement de plusieurs positions
+  d'une voiture un mouvement. Cela reduit le nombre des ``mouvements
+  effectifs'', mais la solution reste la même.
+\item Pour reduire le temps d'exécution (proportionel au nombre de
+  voitures cette fois), la vérification d'emplacements libres pourrait
+  se faire quand on est sûr que ce parking est nouveau et n'a jamais
+  été visité. Dans l'algorithme proposé, tout est fait au même temps
+  dans la même méthode (\texttt{updateGrid()}).
+\item Une nouvelle class \texttt{Truck} pourrait être créé pour gérer
+  les cas des vehicules qui occupent 3 positions.
 
-On pourrait considérer le déplacement de plusieurs positions d'une
-voiture un mouvement. Cela reduit le nombre des ``mouvements effectifs'',
-mais la solution reste la même.
+\end{itemize}
 
-Pour reduire le temps d'exécution (proportionel au nombre de voitures
-cette fois), la vérification d'emplacements libres pourrait se faire
-quand on est sûr que ce parking est nouveau et n'a jamais été
-visité. Dans cet algorithme, tout est fait au même temps dans la même
-méthode (\texttt{updateGrid()}).
 
 \newpage
 
@@ -191,9 +210,5 @@ méthode (\texttt{updateGrid()}).
 \lstinputlisting[language=java]{Car.java}
 \newpage
 \lstinputlisting[language=java]{Move.java}
-\newpage
-\lstinputlisting[]{input.txt}
-\newpage
-\lstinputlisting[]{output.txt}
 
 \end{document}

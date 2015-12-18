@@ -143,6 +143,14 @@ OUTPUT tex_files/rapport.out
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT Escaper.java
 INPUT Escaper.java
 INPUT Escaper.java
@@ -155,10 +163,4 @@ INPUT Car.java
 INPUT Move.java
 INPUT Move.java
 INPUT Move.java
-INPUT input.txt
-INPUT input.txt
-INPUT input.txt
-INPUT output.txt
-INPUT output.txt
-INPUT output.txt
 INPUT tex_files/rapport.aux

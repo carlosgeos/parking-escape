@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Arch Linux) (preloaded format=xelatex 2015.9.18)  18 DEC 2015 04:17
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Arch Linux) (preloaded format=xelatex 2015.9.18)  18 DEC 2015 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,7 +909,14 @@ Package lastpage Info: Please have a look at the pageslts package at
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-Overfull \hbox (31.2609pt too wide) in paragraph at lines 136--140
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 127.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 127.
+
+Overfull \hbox (31.2609pt too wide) in paragraph at lines 158--162
 []\EU1/Inconsolata(0)/m/n/10.95 parseFile() \EU1/TeXGyrePagella(0)/m/n/10.95 : 
 Utilise la classe \EU1/Inconsolata(0)/m/n/10.95 Scanner \EU1/TeXGyrePagella(0)/
 m/n/10.95 et \EU1/Inconsolata(0)/m/n/10.95 FileReader \EU1/TeXGyrePagella(0)/m/
@@ -925,7 +932,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-] [2]
+]
+Overfull \hbox (25.13344pt too wide) in paragraph at lines 175--180
+[]\EU1/TeXGyrePagella(0)/m/n/10.95 Des listes de type \EU1/Inconsolata(0)/m/n/1
+0.95 List<TYPE>, ArrayList() \EU1/TeXGyrePagella(0)/m/n/10.95 sont utilisés dan
+s la plus part des cas. Une file \EU1/Inconsolata(0)/m/n/10.95 Queue<TYPE>,
+ []
+
+[2]
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
@@ -941,31 +955,23 @@ Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
-(./Move.java) [10]
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-(./input.txt) [11]
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-(./output.txt [12] [13]) 
+(./Move.java) 
 AED: lastpage setting LastPage
-[14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+[10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
  (tex_files/rapport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 190.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 214.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
  ) 
 Here is how much of TeX's memory you used:
- 23363 strings out of 493706
- 426503 string characters out of 6150888
- 723148 words of memory out of 5000000
- 26510 multiletter control sequences out of 15000+600000
- 4476 words of font info for 38 fonts, out of 8000000 for 9000
+ 23334 strings out of 493706
+ 426392 string characters out of 6150888
+ 703148 words of memory out of 5000000
+ 26478 multiletter control sequences out of 15000+600000
+ 6931 words of font info for 48 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  52i,12n,58p,10436b,1854s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tex_files/rapport.pdf (14 pages).
+Output written on tex_files/rapport.pdf (10 pages).

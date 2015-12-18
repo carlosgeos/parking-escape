@@ -6,9 +6,9 @@ public class Parking {
     static int SIZE = 5;
     public static int exitX = 2;
     public static int exitY = 4;
-    List<Car> carList = new ArrayList();
+    List<Car> carList;
     public List<Move> moves = new ArrayList();
-    public String[][] parking = new String[SIZE][SIZE];
+    public String[][] grid = new String[SIZE][SIZE];
     public Move comingFrom = null;
 
     public Parking (List<Car> carList) {
@@ -63,8 +63,8 @@ public class Parking {
 		if (j != 0) {
 		    System.out.print(" ");
 		}
-		if (parking[i][j] != null) {
-		    System.out.print(" " + parking[i][j]);
+		if (grid[i][j] != null) {
+		    System.out.print(" " + grid[i][j]);
 		} else {
 		    System.out.print("   ");
 		}
@@ -113,8 +113,8 @@ public class Parking {
 	// where there are whitespaces
     	for (int i = 0; i < carList.size(); i++) {
     	    Car car = carList.get(i);
-    	    parking[car.x1][car.y1] = car.carId;
-    	    parking[car.x2][car.y2] = car.carId;
+    	    grid[car.x1][car.y1] = car.carId;
+    	    grid[car.x2][car.y2] = car.carId;
 	}
 	for (int i = 0; i < carList.size(); i++) {
 	    Car car = carList.get(i);
@@ -142,7 +142,7 @@ public class Parking {
 	// and there is nothing on it.
 	if ((x >= 0 && x < SIZE) &&
 	    (y >= 0 && y < SIZE)) {
-	    if (parking[x][y] == null) {
+	    if (grid[x][y] == null) {
 		return true;
 	    }
 	}
