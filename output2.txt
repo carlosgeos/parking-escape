@@ -13,8 +13,8 @@ La voiture 7 se trouve en position: [(3,2), (4,2)]
 La voiture 8 se trouve en position: [(0,4), (1,4)]
 La voiture 9 se trouve en position: [(3,3), (3,4)]
 
-Une façon de sortir du Parking en 33 mouvements a été trouvée
-Étape suivante: déplacer voiture c2
+Une facon de sortir du Parking en 33 mouvements a été trouvée
+étape suivante: déplacer voiture c2
 [(1,0), (1,1)] -> [(1,1), (1,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -30,7 +30,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c3
+étape suivante: déplacer voiture c3
 [(2,0), (3,0)] -> [(1,0), (2,0)]
 Le Parking doit se trouver dans cet état:
 
@@ -46,7 +46,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c8
+étape suivante: déplacer voiture c8
 [(0,4), (1,4)] -> [(1,4), (2,4)]
 Le Parking doit se trouver dans cet état:
 
@@ -62,7 +62,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c5
+étape suivante: déplacer voiture c5
 [(0,2), (0,3)] -> [(0,3), (0,4)]
 Le Parking doit se trouver dans cet état:
 
@@ -78,7 +78,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c1
+étape suivante: déplacer voiture c1
 [(0,0), (0,1)] -> [(0,1), (0,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -94,7 +94,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c3
+étape suivante: déplacer voiture c3
 [(1,0), (2,0)] -> [(0,0), (1,0)]
 Le Parking doit se trouver dans cet état:
 
@@ -110,7 +110,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,1), (2,2)] -> [(2,0), (2,1)]
 Le Parking doit se trouver dans cet état:
 
@@ -126,7 +126,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4  c7        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c7
+étape suivante: déplacer voiture c7
 [(3,2), (4,2)] -> [(2,2), (3,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -142,7 +142,7 @@ Le Parking doit se trouver dans cet état:
 | c4  c4            |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c4
+étape suivante: déplacer voiture c4
 [(4,0), (4,1)] -> [(4,1), (4,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -158,7 +158,7 @@ Le Parking doit se trouver dans cet état:
 |     c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c4
+étape suivante: déplacer voiture c4
 [(4,1), (4,2)] -> [(4,2), (4,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -174,7 +174,7 @@ Le Parking doit se trouver dans cet état:
 |         c4  c4    |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c4
+étape suivante: déplacer voiture c4
 [(4,2), (4,3)] -> [(4,3), (4,4)]
 Le Parking doit se trouver dans cet état:
 
@@ -190,7 +190,7 @@ Le Parking doit se trouver dans cet état:
 |             c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c7
+étape suivante: déplacer voiture c7
 [(2,2), (3,2)] -> [(3,2), (4,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -206,7 +206,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,0), (2,1)] -> [(2,1), (2,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -222,7 +222,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c3
+étape suivante: déplacer voiture c3
 [(0,0), (1,0)] -> [(1,0), (2,0)]
 Le Parking doit se trouver dans cet état:
 
@@ -238,7 +238,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c1
+étape suivante: déplacer voiture c1
 [(0,1), (0,2)] -> [(0,0), (0,1)]
 Le Parking doit se trouver dans cet état:
 
@@ -254,7 +254,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c3
+étape suivante: déplacer voiture c3
 [(1,0), (2,0)] -> [(2,0), (3,0)]
 Le Parking doit se trouver dans cet état:
 
@@ -270,7 +270,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c2
+étape suivante: déplacer voiture c2
 [(1,1), (1,2)] -> [(1,0), (1,1)]
 Le Parking doit se trouver dans cet état:
 
@@ -286,7 +286,7 @@ Le Parking doit se trouver dans cet état:
 |         c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c3
+étape suivante: déplacer voiture c3
 [(2,0), (3,0)] -> [(3,0), (4,0)]
 Le Parking doit se trouver dans cet état:
 
@@ -302,7 +302,7 @@ Le Parking doit se trouver dans cet état:
 | c3      c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,1), (2,2)] -> [(2,0), (2,1)]
 Le Parking doit se trouver dans cet état:
 
@@ -318,7 +318,7 @@ Le Parking doit se trouver dans cet état:
 | c3      c7  c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c7
+étape suivante: déplacer voiture c7
 [(3,2), (4,2)] -> [(2,2), (3,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -334,7 +334,7 @@ Le Parking doit se trouver dans cet état:
 | c3          c4  c4|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c4
+étape suivante: déplacer voiture c4
 [(4,3), (4,4)] -> [(4,2), (4,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -350,7 +350,7 @@ Le Parking doit se trouver dans cet état:
 | c3      c4  c4    |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c4
+étape suivante: déplacer voiture c4
 [(4,2), (4,3)] -> [(4,1), (4,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -366,7 +366,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c7
+étape suivante: déplacer voiture c7
 [(2,2), (3,2)] -> [(1,2), (2,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -382,7 +382,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c7
+étape suivante: déplacer voiture c7
 [(1,2), (2,2)] -> [(0,2), (1,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -398,7 +398,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,0), (2,1)] -> [(2,1), (2,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -414,7 +414,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c9
+étape suivante: déplacer voiture c9
 [(3,3), (3,4)] -> [(3,2), (3,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -430,7 +430,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c8
+étape suivante: déplacer voiture c8
 [(1,4), (2,4)] -> [(2,4), (3,4)]
 Le Parking doit se trouver dans cet état:
 
@@ -446,7 +446,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4        |
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c8
+étape suivante: déplacer voiture c8
 [(2,4), (3,4)] -> [(3,4), (4,4)]
 Le Parking doit se trouver dans cet état:
 
@@ -462,7 +462,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4      c8|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c9
+étape suivante: déplacer voiture c9
 [(3,2), (3,3)] -> [(3,1), (3,2)]
 Le Parking doit se trouver dans cet état:
 
@@ -478,7 +478,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4      c8|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c6
+étape suivante: déplacer voiture c6
 [(1,3), (2,3)] -> [(2,3), (3,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -494,7 +494,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4      c8|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture c6
+étape suivante: déplacer voiture c6
 [(2,3), (3,3)] -> [(3,3), (4,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -510,7 +510,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4  c6  c8|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,1), (2,2)] -> [(2,2), (2,3)]
 Le Parking doit se trouver dans cet état:
 
@@ -526,7 +526,7 @@ Le Parking doit se trouver dans cet état:
 | c3  c4  c4  c6  c8|
 +---+---+---+---+---+
 
-Étape suivante: déplacer voiture GG
+étape suivante: déplacer voiture GG
 [(2,2), (2,3)] -> [(2,3), (2,4)]
 Le Parking doit se trouver dans cet état:
 

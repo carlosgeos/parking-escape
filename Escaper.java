@@ -62,13 +62,12 @@ public class Escaper {
 	Queue<Parking> toCheck = new LinkedList();
 	List<String[][]> visited = new ArrayList();
 
-	// Check if goal
-	visited.add(park.parking);
-	toCheck.add(park);
+	Parking treating = park;
+	visited.add(treating.parking);
+	toCheck.add(treating);
 
-	escape:
 	while(toCheck.size() != 0) {
-	    Parking treating = toCheck.remove();
+	    treating = toCheck.remove();
 	    for (int i = 0; i < treating.moves.size(); i++) {
 		Move nextMove = treating.moves.get(i);
 		Parking newParking = new Parking(nextMove);
@@ -76,14 +75,14 @@ public class Escaper {
 		    if (checkSolved(newParking.parking)) {
 			followPath(newParking, 0);
 		    	System.out.println("\nDone.\n");
-			break escape;
+			System.exit(0);
 		    }
 		    visited.add(newParking.parking);
 		    toCheck.add(newParking);
 		}
 	    }
 	}
-
+	noSol(treating);
     }
 
     public static boolean isInList(List<String[][]> list, String[][] candidate) {
@@ -104,6 +103,11 @@ public class Escaper {
 	    parking[Parking.exitX][Parking.exitY].equals("GG");
     }
 
+    public static void noSol(Parking block) {
+	System.out.println("No solution found! Have a look at the situation");
+	block.printGrid();
+    }
+
     public static void followPath(Parking solution, int step) {
 	// Recursive function that goes all the way up to the starting
 	// point and then indicates the moves to do to reach the
@@ -112,7 +116,7 @@ public class Escaper {
 	if (movement != null) {
 	    // If not in the initial state, keep going up
 	    followPath(movement.predParking, ++step);
-	    System.out.print("Étape suivante: ");
+	    System.out.print("étape suivante: ");
 	    Car toMove = movement.carList.get(movement.index);
 	    String id = toMove.carId;
 
@@ -127,7 +131,7 @@ public class Escaper {
 	    // Printing some info at the beginning about the first
 	    // state parking
 	    System.out.println(solution);
-	    System.out.println("Une façon de sortir du Parking en " + step + " mouvements a été trouvée");
+	    System.out.println("Une facon de sortir du Parking en " + step + " mouvements a été trouvée");
 	}
     }
 }

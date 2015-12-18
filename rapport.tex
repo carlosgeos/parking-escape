@@ -1,7 +1,11 @@
 \documentclass[11pt,a4paper]{article}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{xltxtra}
+\usepackage{fontspec} %Font package
+\usepackage{xunicode}
+\setmainfont{TeX Gyre Pagella}
+\setmonofont{Inconsolata}
+\usepackage{listingsutf8}
 \usepackage[frenchb]{babel} % Global stuff set to french
 \usepackage[margin=2cm]{geometry} % The margin of the page
 %\usepackage{amsmath}  % to include math formulas
@@ -10,9 +14,7 @@
 \usepackage{fancyhdr} % to be able to make the page fancy looking
 \usepackage{lastpage} % so latex knows what is the last page...
 \usepackage{color} % For text colors
-\usepackage{palatino} % Change font
 %\usepackage{tabularx}
-\usepackage{listings}
 
 %% Fancy layout
 \pagestyle{fancy}
@@ -46,14 +48,16 @@
   frame=trBL,                    % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{myblue},       % keyword style
-  language=c,                 % the language of the code
-  morekeywords={*,...},            % if you want to add more keywords to the set
+  language=java,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords
+                                % to the set
+  inputencoding=utf8,
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=9pt,                   % how far the line-numbers are from the code
   numberstyle=\footnotesize\color{mygray}, % the style that is used for the line-numbers
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  %showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  %showstringspaces=false,          % underline spaces within strings only
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=true,          % underline spaces within strings only
   showtabs=false,                  % show tabs within strings adding particular underscores
   stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
   stringstyle=\color{mymauve},     % string literal style
@@ -69,19 +73,67 @@
 \section{Introduction}
 
 Le but de ce projet est de produire un algorithme efficace pour
-résoudre le problème dessss
+résoudre le casse-tête ``Parking Escape'' également connu sous le nom
+``Rush Hour''. Le jeu simule une congestion automobile dans un parking
+et l'objectif est de faire sortir une certaine voiture (goal/rouge)
+alignée avec la sortie. Les autres vehicules bloquent la sortie et ne
+peuvent se déplacer que le long de ses axes (horizontal ou vertical).
 
 \section{Solution proposé - Algorithme}
 
-Comme conseillé dans l'énoncé, on considere chaque état possible du
+Comme conseillé dans l'énoncé, on considère chaque état possible du
 parking comme un sommet dans un graphe, et chaque mouvement (déplacer
 une voiture de une position) un arc. Le problème devient alors très
 simple et il suffit de réaliser un BFS (Breadth First Search), qui
-visite les noeuds en largeur.
+visite (et construit) les noeuds en largeur. L'algorithme peut mettre
+fin a son exécution dès qu'une solution a été trouvée, puisque on est
+sûr d'avoir trouvé la plus courte et il ne faut pas verifier des
+autres solutions.
 
-Plus spécifiquement,
+Plus spécifiquement, on regarde tous les mouvements possibles dans un
+sommet/parking de départ \emph{s}. Pour chaque mouvement, un autre
+Parking est créé, et il n'est gardé que s'il n'a pas été visité
+avant. Aprés avoir construit tous les états possibles avec ces
+mouvements on passe au premier et recommence, en regardant tous le
+mouvements possibles pour ce parking.
 
-Dans ce cas, puisque tous les arcs ont le même poids,
+Une autre approche serait de construire le graphe avec tous les cas
+possibles, et utiliser l'algorithme de Dijkstra pour trouver le chemin
+le plus court entre un sommet initial et un sommet marqué comme
+solution. Dans ce cas, puisque tous les arcs ont le même poids, cette
+approche n'est pas choisie.
+
+\subsection{Complexité}
+
+Dans le pire des cas, cet algorithme a une complexité de \emph{O(|S| +
+  |A|)}, si \emph{S} est le nombre de sommets et \emph{A} est le
+nombre d'arcs, car tous les sommets et tous les arcs sont
+visités. L'espace de travail est le même.
+
+Dans notre cas, on connaît pas tous les sommets, donc c'est plus
+adéquat d'exprimmer la complexité comme: \emph{O(b$^{m})$} où \emph{b}
+est le nombre maximum d'arcs sortants d'un sommet (aussi nombre de
+sommet ``fils'') et \emph{m} la hauteur maximale.
+
+
+
+\subsection{Classes implementées}
+
+\begin{itemize}
+\item \texttt{Escaper}: Classe principale, qui contient l'algorithme
+  de visite et instancie la class \texttt{Parking} au fur et à
+  mesure. Cette classe s'occupe aussi du parsing du fichier et de
+  communiquer la solution finale.
+\item \texttt{Parking}: État du parking dans un moment
+  donné. Plusieurs objets de cette classe forment le graphe.
+\item \texttt{Car}: Cette classe représente une voiture (ses
+  coordonnées, ID, voiture Goal ou pas, orientation, etc).
+\item \texttt{Move}: Contient toute l'information pour savoir quel a
+  été le mouvement realisé et quel était l'état du parking juste
+  avant. Permet de revenir en arrière facilement. Ces mouvements sont
+  les arcs du graphe.
+\end{itemize}
+
 
 
 \subsection{Parsing fichier input}
@@ -102,12 +154,14 @@ deux méthodes:
 
 \begin{itemize}
 \item Toutes les voitures doivent être de taille 2.
-\item Les fichier input ne comporte pas d'erreur.
+\item Les fichier input ne doit pas comporter d'erreur.
 \end{itemize}
 
 \subsection{Structures de données}
 
-List...
+Des listes de type \texttt{List<TYPE>, ArrayList()} sont utilisés dans
+la plus part des cas. Une file est aussi utilisé pour stocker les
+sommets a visiter dans l'algorithme de visite.
 
 \section{Améliorations}
 
@@ -120,8 +174,11 @@ On pourrait considérer le déplacement de plusieurs positions d'une
 voiture un mouvement. Cela reduit le nombre des ``mouvements effectifs'',
 mais la solution reste la même.
 
-Un autre algorithme heuristique..
-
+Pour reduire le temps d'exécution (proportionel au nombre de voitures
+cette fois), la vérification d'emplacements libres pourrait se faire
+quand on est sûr que ce parking est nouveau et n'a jamais été
+visité. Dans cet algorithme, tout est fait au même temps dans la même
+méthode (\texttt{updateGrid()}).
 
 \newpage
 

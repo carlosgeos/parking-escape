@@ -18,4 +18,4 @@ execute_hard: $(FILE).class
 	$(JRE) $(FILE) $(IN2) | tee output2.txt
 
 tex: rapport.tex
-	latexmk -pdf --output-directory=tex_files $< && evince tex_files/rapport.pdf
+	latexmk -xelatex --output-directory=tex_files $< && evince tex_files/rapport.pdf
